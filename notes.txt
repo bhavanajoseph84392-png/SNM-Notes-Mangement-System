@@ -1,0 +1,65 @@
+> render_template() -- 
+The module is used for access the .html files from the template folder 
+
+
+template _ variable --
+A variable defined in the function and send the template by using {{variable}}
+
+<!--  for forloop we should give endfor -->
+  <!-- for if condition we should give endif -->
+
+> mysql.connector ---
+  This module is used to connect to the data base
+
+> connection.cursor() ---
+  This will open & close the connection to the database after execution of sql query.
+
+> Execute -- 
+it is used to get the data from the database by writing sql query in this .
+
+>fetchone ---
+This will return only single record from the database 
+
+> fetchall -- 
+This will return all the details from the database table.
+
+> commit -- 
+used for the insert or update or delete data from the tables and we should make that changes permanently in database 
+
+
+>bcrypt -- this module is used for coinvert a normal pw to interpreted error hashed pssword.
+
+> session -- sessions are used to remember the user information that sent by the http request ,
+          -- in the section we can metion the time for the session to be alive .
+
+
+ types of sessions: --- 
+ (1)client- side session  -- the session are used to store the information on the client browser side , usually through the cokkies
+
+ (2) server - side sessions -- used to store the information on the server side , through session 
+                            -- commonly  stored location in databases
+                            -- session will identify the users 
+                            -- sessions only store user related information   
+
+
+> tokenization -- the tokenization is a secure string used to identify and verify a user .
+               --  this is mostly used for re-set password or user sign-up to validate .
+
+> why tokwns-- tokennis more secure
+
+>itsdangerous module -- the module is used to work we serializer , dumos and loads
+
+> dumps --- to genetrate the tokens 
+              ex --from itsdangerous import URLSafeTimedSerializer
+              serializer = URLSafeTimedSerializer('SNM-secret-key')
+              token =  serializer.dumps('rajanasravyasri@gmail.com')
+              print(token)
+
+              data =serializer.loads(token)
+              print(data)
+
+> loads -- used to verify the tokens .              
+
+
+  
+
