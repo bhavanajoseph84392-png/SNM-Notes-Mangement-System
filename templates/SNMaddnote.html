@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Note</title>
+</head>
+
+<body>
+
+    <h2>Add New Note</h2>
+
+    <form action="/add-note" method="POST">
+
+        <label>Title:</label>
+        <br>
+
+        <input
+            type="text"
+            name="title"
+            maxlength="200"
+            required
+        >
+
+        <br><br>
+
+        <label>Content:</label>
+        <br>
+
+        <textarea
+            name="content"
+            rows="8"
+            cols="50"
+            required
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Add Note
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/notes">
+        View All Notes
+    </a>
+
+    <br><br>
+
+    <a href="/dashboard">
+        Back to Dashboard
+    </a>
+
+</body>
+</html>

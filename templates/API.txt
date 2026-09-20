@@ -1,0 +1,57 @@
+"""
+API
+-----------
+-->Application Programming interface
+-->An API is a way for two application to commumicate wit each other
+React Application
+        |
+GET/students
+        |
+Flask API
+        |
+MySQL Database
+        |
+Flask API
+        |
+JSON Response
+        |
+React Application
+
+REST Arc
+-----------
+-->Representational State Transfer
+-->An REST API uses the http methods, URL,  and representation such as JSON to work with the resource
+ex:
+--------
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route("/student")
+def student():
+    data = {
+        "id": 1,
+        "name": "Arun",
+        "course": "Python"
+    }
+    return jsonify(data)
+
+@app.route("/students")
+def students():
+    data = [
+        {"id": 1, "name": "Aswini"},
+        {"id": 2, "name": "Gowtham"},
+        {"id": 3, "name": "Vicky"}
+    ]
+    return jsonify(data)
+
+app.run(debug=True)
+ 
+
+
+jsonify()
+-------------
+-->josnify() function is the flask provided module that creates a JSON reponse
+from flask import Flask, jsonify
+
+"""

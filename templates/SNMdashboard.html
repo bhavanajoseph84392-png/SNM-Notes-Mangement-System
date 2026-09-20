@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SNM Dashboard</title>
+</head>
+
+<body>
+
+    <h1>Welcome to SNM Dashboard</h1>
+
+    <p>You are successfully logged in.</p>
+
+    <hr>
+    <h2><search</h2>
+    <form action="{{url_for('search')}}"method="post">
+    <input type="text"
+           name="search"
+           placeholder="search notes or files"
+           required>
+     <button type=""submit">
+    search
+</button> 
+</form>
+<hr>     
+
+    <h2>Notes Management</h2>
+
+    <a href="{{ url_for('add_note') }}">
+        Add New Note
+    </a>
+
+    <br><br>
+
+    <a href="{{ url_for('view_notes') }}">
+        View My Notes
+    </a>
+    <hr>
+    <h2>file management</h2>
+    <a href="{{ url_for('view_all_files') }}">
+        view uploaded files 
+    </a>
+    <br><br>
+
+    <hr>
+
+    <a href="{{ url_for('logout') }}">
+        Logout
+    </a>
+
+</body>
+</html>

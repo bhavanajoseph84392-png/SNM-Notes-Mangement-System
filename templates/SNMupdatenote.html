@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Update Note</title>
+</head>
+
+<body>
+
+    <h2>Update Note</h2>
+
+    <form method="POST">
+
+        <label>Title:</label>
+
+        <br><br>
+
+        <input
+            type="text"
+            name="title"
+            value="{{ note[2] }}"
+            required
+        >
+
+        <br><br>
+
+        <label>Content:</label>
+
+        <br><br>
+
+        <textarea
+            name="content"
+            rows="10"
+            cols="50"
+            required
+        >{{ note[3] }}</textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Update Note
+        </button>
+
+    </form>
+
+    <br><br>
+
+    <a href="{{ url_for('upload_file', note_id=note[0]) }}">
+        Upload File
+    </a>
+
+    <br><br>
+
+    <a href="{{ url_for('view_single_note', note_id=note[0]) }}">
+        Back to Note
+    </a>
+
+    <br><br>
+
+    <a href="{{ url_for('view_notes') }}">
+        Back to Notes
+    </a>
+
+</body>
+
+</html>
